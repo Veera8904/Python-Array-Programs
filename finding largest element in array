@@ -1,0 +1,27 @@
+#finding largest element in array using sort function
+def largest(arr, n):
+
+    arr.sort()
+
+    return arr[n-1]
+  
+arr = [20, 647, 4326, 4, 432788]
+n = len(arr)
+Ans = largest(arr, n)
+print("Largest in given array ", Ans)
+
+
+
+
+#using reduce fuction
+from functools import reduce
+def largest(arr):
+
+    ans = reduce(max, arr)
+ 
+    return ans
+    
+arr = [147, 36, 244, 1035]
+n = len(arr)
+Ans = largest(arr)
+print("Largest in given array ", Ans)

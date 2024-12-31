@@ -1,0 +1,15 @@
+# Reversal Algorithm Using collections.deque
+
+from collections import deque
+
+def rotate_array_deque(arr, d):
+    n = len(arr)
+    rotated_array = deque(arr)
+    rotated_array.rotate(-d)
+    return list(rotated_array)
+
+arr = [3, 5, 7, 1, 3, 6, 9, 8]
+d = 3
+
+rotated_array = rotate_array_deque(arr, d)
+print("Rotated array:", rotated_array)
